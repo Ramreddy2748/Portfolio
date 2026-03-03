@@ -75,31 +75,79 @@ The portfolio highlights real-world systems I’ve built — from scalable AWS d
 
 ---
 
-## 🏗️ Tech Stack
+import { Code2, Server, Cloud, Brain } from "lucide-react";
 
-### Frontend
-- React
-- TypeScript
-- Tailwind CSS
-- Framer Motion
+export const TechStack = () => {
+  const stack = [
+    {
+      title: "Frontend Engineering",
+      icon: Code2,
+      items: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    },
+    {
+      title: "Backend & APIs",
+      icon: Server,
+      items: ["FastAPI", "Node.js", "RESTful APIs", "Authentication"],
+    },
+    {
+      title: "Cloud & DevOps",
+      icon: Cloud,
+      items: ["AWS (EC2, S3, Lambda)", "EMR", "Glue", "Redshift", "Docker"],
+    },
+    {
+      title: "Machine Learning & Data",
+      icon: Brain,
+      items: [
+        "TensorFlow",
+        "Scikit-learn",
+        "RAG Pipelines",
+        "LLM Integrations",
+        "PySpark",
+      ],
+    },
+  ];
 
-### Backend & APIs
-- FastAPI
-- Node.js
-- RESTful APIs
+  return (
+    <section className="py-24 relative">
+      <div className="section-container">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+            🏗️ <span className="gradient-text">Tech Stack</span>
+          </h2>
+          <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
+        </div>
 
-### Cloud & DevOps
-- AWS (EC2, S3, Lambda, EMR, Glue, Redshift)
-- Docker
-- Kubernetes
-- CI/CD
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {stack.map((section, index) => (
+            <div
+              key={index}
+              className="glass-card p-6 rounded-xl border border-white/10 
+                         hover:border-primary/40 transition-all duration-300
+                         hover:-translate-y-2 hover:shadow-xl"
+            >
+              <div className="w-12 h-12 mb-4 flex items-center justify-center 
+                              rounded-lg bg-primary/10">
+                <section.icon className="w-6 h-6 text-primary" />
+              </div>
 
-### AI & Data
-- TensorFlow
-- Scikit-learn
-- LangChain
-- RAG Pipelines
-- Distributed Data Systems
+              <h3 className="font-semibold text-lg mb-4">
+                {section.title}
+              </h3>
+
+              <ul className="space-y-2 text-muted-foreground text-sm">
+                {section.items.map((item, idx) => (
+                  <li key={idx} className="hover:text-foreground transition-colors">
+                    • {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 
 ---
 
