@@ -137,7 +137,7 @@ export const Hero = () => {
               className="relative w-full h-full rounded-[2rem] overflow-hidden border-2 border-primary/30 shadow-2xl bg-card/50 backdrop-blur-sm cursor-pointer"
             >
               <img
-                src="/Profile_photo.jpeg"
+                src="/profile.jpeg"
                 alt="Venkata Ramireddy Seelam"
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
               />
