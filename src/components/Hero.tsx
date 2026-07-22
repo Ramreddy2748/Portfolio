@@ -58,10 +58,11 @@ export const Hero = () => {
           >
             <TypeWriter
               words={[
+                'AI Engineer',
+                'Data Engineer',
+                'Codeforces Master',
                 'SDE',
                 'ML Enthusiast',
-                'AI Agent Developer',
-                'Codeforces Master',
                 'Dashboard Developer',
                 'Problem Solver'
               ]}

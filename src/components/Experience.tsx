@@ -5,50 +5,47 @@ import { ChevronDown } from 'lucide-react';
 
 const experiences = [
   {
-    title: 'Software Engineer',
+    title: 'Software Engineer (Data Platform)',
     company: 'UpGrad',
-    period: 'Aug 2023 - Dec 2024',
+    period: 'Aug 2023 - Nov 2024',
     location: 'India',
     description:
-      'Built scalable data platforms and full-stack applications, improving pipeline performance and delivering user-facing features for analytics and ML-driven workflows.',
+      'Built scalable data platforms and backend services, engineering ETL pipelines and REST APIs while shipping LLM-powered features for production analytics and ML-driven workflows.',
     achievements: [
-      'Designed and optimized AWS EMR and Glue pipelines processing 7M+ monthly records, reducing data delivery time by 35% and enabling near real-time analytics.',
-      'Enhanced a serverless ETL framework (Glue → Redshift), cutting refresh latency by 60%; automated S3 log audits with Lambda and Athena, eliminating 80% of manual checks.',
-      'Led end-to-end development of TubeTranscriber (FastAPI + React) serving 5K+ users, enabling automated transcription and semantic retrieval.',
+      'Engineered and maintained ETL pipelines in Python and SQL at 99.9% pipeline reliability, structuring outputs for downstream analytics and ML workloads.',
+      'Designed and built REST APIs and microservices in Java and Python handling 10K+ daily requests; deployed on AWS with Docker and Kubernetes, cutting deployment time by 40%.',
+      'Optimized database schema and query performance across PostgreSQL and MongoDB, reducing storage costs by 25%; built monitoring and alerting (Grafana, Prometheus, Splunk) cutting incident detection time by 50%.',
+      'Built and deployed LLM-powered features into production using Python and HuggingFace, including a video transcription chatbot with natural language Q&A, improving user engagement by 30%.',
     ],
     technologies: [
       'Java',
       'Python',
       'FastAPI',
-      'React',
-      'AWS EMR',
-      'AWS Glue',
-      'AWS Lambda',
-      'Amazon Athena',
-      'Amazon Redshift',
-      'S3',
+      'HuggingFace',
+      'AWS',
+      'Docker',
+      'Kubernetes',
+      'PostgreSQL',
+      'MongoDB',
+      'Grafana',
     ],
   },
   {
-    title: 'Data Engineer Intern',
-    company: 'Amazon',
-    period: 'Mar 2023 - Jul 2023',
+    title: 'Software Engineering Intern',
+    company: 'Darwinbox',
+    period: 'Jan 2023 - Jul 2023',
     location: 'India',
     description:
-      'Developed distributed ML data workflows and scalable training pipelines to automate image labeling and improve model performance.',
+      'Developed backend services for high-volume enterprise HR workflows, working across the stack from API development to production debugging.',
     achievements: [
-      'Built a distributed image-labeling pipeline using Apache Beam and TensorFlow, automating labeling for 23K+ images.',
-      'Improved model accuracy to 81% and increased training throughput by 30% through workflow optimization, reducing manual labeling effort by 63%.',
-      'Containerized ML workflows using Docker and deployed on GKE, improving efficiency by 20% and enabling horizontal scaling.',
+      'Developed backend services in Java and Spring Boot, optimizing REST APIs and SQL queries across high-volume enterprise HR workflows.',
+      'Participated in code reviews and debugging, using monitoring logs to investigate and resolve production issues.',
     ],
     technologies: [
-      'Python',
-      'Apache Beam',
-      'TensorFlow',
-      'Docker',
-      'Kubernetes (GKE)',
-      'Distributed Systems',
-      'ML Pipelines',
+      'Java',
+      'Spring Boot',
+      'REST APIs',
+      'SQL',
     ],
   },
 ];
@@ -110,19 +107,6 @@ export const Experience = () => {
                   >
                     <div className="p-6 md:p-8">
                       <div className="flex items-start gap-4 md:gap-6 mb-6">
-                        {/* Logo Container */}
-                        {/* <div className="shrink-0">
-                          <div className="w-20 h-16 md:w-24 md:h-18 rounded-xl bg-transparent flex items-center justify-center">
-                            {exp.image ? (
-                              <img
-                                src={exp.image}
-                                alt={exp.company}
-                                className="w-full h-full object-contain p-0"
-                              />
-                            ) : null}
-                          </div>
-                        </div> */}
-
                         {/* Title & Company */}
                         <div className="flex-1 min-w-0">
                           <h3 className="font-display text-lg md:text-xl font-bold text-foreground leading-tight mb-1">

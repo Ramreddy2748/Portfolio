@@ -4,117 +4,96 @@ import { useRef } from 'react';
 
 const skillCategories = [
   {
-    title: 'Programming & Data Engineering',
+    title: 'Languages',
     skills: [
-      'Python', 'Java', 'C++', 'Go',
+      'Python', 'Java', 'C++',
       'JavaScript', 'TypeScript',
-      'SQL', 'PySpark',
-      'Pandas', 'NumPy', 'SciPy',
-      'Scikit-learn'
+      'SQL'
     ],
   },
 
   {
-    title: 'Machine Learning & Deep Learning',
+    title: 'Backend & APIs',
     skills: [
-      'Supervised Learning',
-      'Unsupervised Learning',
-      'Regression & Classification',
-      'Clustering',
-      'Feature Engineering',
-      'Model Evaluation',
-      'Deep Learning',
-      'Neural Networks',
-      'CNN',
-      'RNN',
-      'LSTM',
-      'Transformers',
-      'PyTorch',
-      'TensorFlow',
-      'Keras',
-      'Transfer Learning',
-      'Hyperparameter Tuning'
+      'REST APIs',
+      'FastAPI',
+      'Spring Boot',
+      'Microservices',
+      'System Design',
+      'Object-Oriented Programming'
     ],
   },
 
   {
-    title: 'AI Agents & Intelligent Systems',
+    title: 'AI/ML',
     skills: [
-      'LLM Integrations',
-      'RAG Pipelines',
-      'Embedding-based Retrieval',
-      'Semantic Search',
+      'LLMs',
+      'RAG',
       'LangChain',
-      'AI Automation',
+      'Prompt Engineering',
+      'PyTorch',
+      'HuggingFace',
+      'Model Evaluation',
+      'LoRA/PEFT',
+      'Model Fine-Tuning',
+      'FAISS',
+      'Embeddings',
+      'Transformers (BERT, GPT)',
       'Multi-Agent Systems',
-      'Knowledge Base Engineering',
-      'n8n Agent Development'
+      'LLM-as-a-Judge'
     ],
   },
 
   {
-    title: 'Databases & Cloud Platforms',
+    title: 'Data Engineering',
     skills: [
-      'MySQL',
+      'ETL/ELT Pipelines',
+      'Apache Spark',
+      'PySpark',
+      'Kafka',
+      'AWS Glue',
+      'AWS EMR',
+      'Redshift',
+      'Airflow'
+    ],
+  },
+
+  {
+    title: 'Cloud & Infra',
+    skills: [
+      'AWS',
+      'Docker',
+      'Kubernetes',
+      'CI/CD (GitHub Actions, Jenkins)',
+      'Terraform'
+    ],
+  },
+
+  {
+    title: 'Databases',
+    skills: [
       'PostgreSQL',
       'MongoDB',
-      'DynamoDB',
-      'Amazon Redshift',
-      'Amazon Athena',
-      'AWS S3',
-      'AWS EC2',
-      'AWS Lambda',
-      'AWS ECS Fargate',
-      'AWS Glue',
-      'Microsoft Azure',
-      'Google Cloud',
+      'Redis',
+      'MySQL',
+      'NoSQL',
+      'Schema Design',
       'Query Optimization'
     ],
   },
 
   {
-    title: 'Data Visualization & Analytics',
+    title: 'Practices & Tools',
     skills: [
-      'Matplotlib',
-      'Seaborn',
-      'Plotly',
-      'Tableau',
-      'Power BI',
-      'Looker Studio',
-      'Excel Pivot Tables'
-    ],
-  },
-
-  {
-    title: 'DevOps, Tools & Engineering Practices',
-    skills: [
-      'Git/GitHub',
-      'CI/CD',
-      'Docker',
-      'Kubernetes (GKE)',
-      'Jupyter',
-      'VS Code',
-      'JIRA',
-      'Confluence',
-      'Logging & Monitoring',
-      'Configuration Management',
-      'REST APIs',
-      'System Design',
-      'Microservices Architecture'
-    ],
-  },
-
-  {
-    title: 'Algorithms & Computer Science Fundamentals',
-    skills: [
-      'Data Structures',
-      'Dynamic Programming',
-      'Greedy Algorithms',
-      'Graph Algorithms',
-      'Time & Space Complexity',
-      'Optimization',
-      'Object-Oriented Programming',
-      'Design Patterns'
+      'Data Structures & Algorithms',
+      'Agile',
+      'Code Review',
+      'Unit/Integration Testing',
+      'Debugging',
+      'Git',
+      'Grafana',
+      'Prometheus',
+      'Splunk'
     ],
   },
 ];

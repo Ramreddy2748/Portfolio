@@ -5,16 +5,17 @@ import { GraduationCap, Calendar, MapPin } from 'lucide-react';
 
 const educationData = [
   {
-    degree: 'MS in Software Engineering',
+    degree: 'MS in Applied Data Intelligence',
     institution: 'San Jose State University',
     location: 'San Jose, CA, USA',
     period: 'Jan 2025 - Dec 2026',
-    grade: 3.86, 
-    logo: 'DBS',
+    grade: 3.9,
+    logo: 'SJSU',
     description: 'Comprehensive program covering Data Science, Cloud Computing, Software Engineering Process, Machine learning methodologies.',
     learnings: [
+      'AI Engineering & LLM Applications',
       "Machine Learning",
-      'Software Engineering Processs',
+      'Software Engineering Process',
       'Advanced Deep learning',
       'Big data processing and cloud computing',
       'Distributed systems'
@@ -23,10 +24,9 @@ const educationData = [
   {
     degree: 'Bachelor of Technology - BTech, Computer Science',
     institution: 'Sreenidhi Institute of Science of Technology (Autonomous)',
-    location: 'India',
+    location: 'Hyderabad, India',
     period: '2019 - 2023',
-    // grade: '8.8/10', // Grade removed as per instruction
-    logo: 'GVP',
+    logo: 'SNIST',
     description: 'Strong foundation in computer science fundamentals and software development.',
     learnings: [
       'Strong foundations in data structures, algorithms, OS, DBMS',
@@ -93,6 +93,12 @@ export const Education = () => {
                     <MapPin size={14} className="text-primary" />
                     <span>{edu.location}</span>
                   </div>
+                  {edu.grade && (
+                    <div className="flex items-center gap-2 bg-secondary/50 px-3 py-1.5 rounded-full">
+                      <span className="text-primary font-semibold">GPA:</span>
+                      <span>{edu.grade}/4.0</span>
+                    </div>
+                  )}
                 </div>
                 <p className="text-muted-foreground mb-4 leading-normal text-balance">
                   {edu.description}

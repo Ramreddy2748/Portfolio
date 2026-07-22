@@ -15,45 +15,57 @@ const categories = [
 ];
 
 const projects = [
-  // ===== Full-Stack & Systems =====
+  
+
+
+
   {
-    title: 'Kayak Clone – AI-Powered Travel Booking Platform',
+    title: 'Agentic RAG for Healthcare Accreditation',
     description:
-      'Scalable full-stack travel booking platform built with React, Node.js, and FastAPI, supporting 10K+ users with Redis caching and event-driven architecture.',
-    tags: ['React', 'Node.js', 'FastAPI', 'PostgreSQL', 'MongoDB', 'Redis', 'Kafka', 'AWS'],
-    categories: ['🌐 Full-Stack Engineering', '⚙️ Distributed Systems'],
-    github: 'https://github.com/Ramreddy2748/YouTube-Transcribe-AI-Assistant-for-YouTube-Lectures',
-    image: 'project_kayak.jpg',
+      'RAG pipeline over a 4,000-page corpus using FAISS-indexed embeddings and hybrid retrieval (BM25 + semantic search) with reranking. Six-agent orchestration layer with HIPAA-compliant role-based access control reduced hallucination by 40%.',
+    tags: ['Python', 'LangChain', 'FastAPI', 'BGE-M3', 'FAISS', 'Docker', 'AWS'],
+    categories: ['🤖 AI Systems'],
+    image: '/project_rag_healthcare.jpg',
   },
 
   {
-    title: 'Airbnb Prototype – Microservices Application',
+    title: 'Debate-Based Multi-Agent Financial Risk Analysis',
     description:
-      'Production-style booking system using React, Express, and MySQL with Dockerized microservices and optimized REST APIs (40% latency reduction).',
-    tags: ['React', 'Express', 'MySQL', 'Docker', 'REST APIs', 'AWS S3'],
-    categories: ['🌐 Full-Stack Engineering', '⚙️ Microservices'],
-    github: 'https://github.com/Ramreddy2748/Airbnb',
-    image: '/project_airbnb.jpg',
+      'Multi-agent system where specialized agents debate adversarially before committing to a financial risk verdict. Fine-tuned a BERT-based classifier with LoRA/PEFT, reducing hallucination by 25% across 50+ companies.',
+    tags: ['Python', 'LangChain', 'FastAPI', 'PostgreSQL', 'LoRA/PEFT', 'BERT'],
+    categories: ['🤖 AI Systems', '🧠 Machine Learning'],
+    github: '', // no public repo link provided yet
+    image: '/project_debate_agents.jpg',
   },
 
   {
-    title: 'YouTube Transcribe – AI Assistant for Lectures',
+    title: 'Multimodal Fall Detection with LLM-as-a-Judge',
     description:
-      'AI-powered assistant that transcribes and summarizes YouTube lectures using speech-to-text and LLM pipelines, enabling semantic search and structured retrieval.',
-    tags: ['Python', 'LLM Integration', 'NLP', 'Speech-to-Text', 'FastAPI'],
-    categories: ['🤖 AI Systems', '🌐 Full-Stack'],
-    github: 'https://github.com/Ramreddy2748/YouTube-Transcribe-AI-Assistant-for-YouTube-Lectures',
-    image: '/project_utube_transcriber.jpg',
+      'Multimodal pipeline combining CNN-based pose estimation and motion feature extraction with an LLM-as-a-Judge arbitration layer, reducing false positives by 22% across 1,000+ video samples.',
+    tags: ['Python', 'PyTorch', 'OpenCV', 'LangChain', 'Computer Vision'],
+    categories: ['🧠 Deep Learning', '🤖 AI Systems'],
+    github: '', // no public repo link provided yet
+    image: '/project_fall_detection.jpg',
   },
 
   {
-    title: 'Bitcoin Validation Prototype',
+    title: 'StreamTide – Distributed Backend System',
     description:
-      'Blockchain validation simulator implementing transaction verification logic and proof-of-work fundamentals to demonstrate distributed trust mechanisms.',
-    tags: ['Python', 'Blockchain', 'Cryptography', 'Systems Design'],
-    categories: ['⚙️ Systems Engineering'],
-    github: 'https://github.com/Ramreddy2748/Bitcoin_validation',
-    image: '/project-bitcoin.png',
+      'Distributed backend processing 660M+ records using Spark on AWS EMR and Kafka event streaming, with algorithmic optimizations (Bloom Filters, LSH) reducing query latency by 50%.',
+    tags: ['Python', 'C++', 'PySpark', 'Kafka', 'AWS EMR', 'SQL', 'Airflow'],
+    categories: ['⚙️ Distributed Systems', '☁️ Cloud & Data Engineering'],
+    github: 'https://github.com/Ramreddy2748/Data228_project',
+    image: '/project_streamtide.jpg',
+  },
+
+  {
+    title: 'Grocify – AI-Powered Grocery Management Platform',
+    description:
+      'Full-stack grocery management app with a React frontend and Python/FastAPI backend, featuring a content-based recommendation engine generating 100+ personalized meal suggestions with sub-200ms response times.',
+    tags: ['React', 'Python', 'FastAPI', 'PostgreSQL', 'Redis'],
+    categories: ['🌐 Full-Stack Engineering'],
+    github: '', // no public repo link provided yet
+    image: '/project_grocify.jpg',
   },
 
   // ===== Cloud & Data Engineering =====
@@ -65,6 +77,27 @@ const projects = [
     categories: ['☁️ Cloud & Data Engineering'],
     github: 'https://github.com/shra012/mimic-iv-datawarehouse',
     image: '/project_Health_Care.jpg',
+  },
+
+  // ===== Full-Stack & Systems =====
+  {
+    title: 'Kayak Clone – AI-Powered Travel Booking Platform',
+    description:
+      'Scalable full-stack travel booking platform built with React, Node.js, and FastAPI, supporting 10K+ users with Redis caching and event-driven architecture.',
+    tags: ['React', 'Node.js', 'FastAPI', 'PostgreSQL', 'MongoDB', 'Redis', 'Kafka', 'AWS'],
+    categories: ['🌐 Full-Stack Engineering', '⚙️ Distributed Systems'],
+    github: '', // TODO: previously pointed at the YouTube Transcribe repo by mistake — add correct repo link
+    image: 'project_kayak.jpg',
+  },
+
+  {
+    title: 'Airbnb Prototype – Microservices Application',
+    description:
+      'Production-style booking system using React, Express, and MySQL with Dockerized microservices and optimized REST APIs (40% latency reduction).',
+    tags: ['React', 'Express', 'MySQL', 'Docker', 'REST APIs', 'AWS S3'],
+    categories: ['🌐 Full-Stack Engineering', '⚙️ Microservices'],
+    github: 'https://github.com/Ramreddy2748/Airbnb',
+    image: '/project_airbnb.jpg',
   },
 
   // ===== Machine Learning & AI =====
@@ -205,16 +238,17 @@ export const Projects = () => {
                   ))}
                 </div>
                 <div className="flex gap-4 mt-auto">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
-                  >
-                    <Github size={18} />
-                    View Code
-                  </a>
-      
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                    >
+                      <Github size={18} />
+                      View Code
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>
